@@ -2,6 +2,7 @@ import ProfileStatList from "../ProfileStatList/ProfileStatList";
 
 export default function Profile(props) {
 	const { username, tag, location, avatar, stats } = props;
+	const { followers, views, likes } = stats;
 
 	return (
 		<div className="profile">
@@ -12,7 +13,7 @@ export default function Profile(props) {
 				<p className="location">{location}</p>
 			</div>
 
-			<ProfileStatList followers={stats.followers} views={stats.views} likes={stats.likes} />
+			<ProfileStatList followers={followers} views={views} likes={likes} />
 		</div>
 	);
 }

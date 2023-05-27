@@ -5,10 +5,12 @@ import Profile from "./components/Profile/Profile";
 // import Statistics from "./components/Statistics/Statistics";
 // import FriendList from "./components/FriendList/FriendList";
 
+const { username, tag, location, avatar, stats } = user;
+
 export default function App() {
 	return (
-		<Profile username={user.username} tag={user.tag} location={user.location} avatar={user.avatar} stats={user.stats} />
-		// <Statistics id={data.id} label={data.label} percentage={data.percentage} />
+		<Profile username={username} tag={tag} location={location} avatar={avatar} stats={stats} />
+		// <Statistics title={"Upload stats"} stats={data} />
 		// <FriendList friends={friends} />
 	);
 }
