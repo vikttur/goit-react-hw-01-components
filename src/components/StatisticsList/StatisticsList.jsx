@@ -1,12 +1,10 @@
-export default function StatisticsList(props) {
-	const { id, label, percentage } = props;
+import StatisticsItem from "../StatisticsItem/StatisticsItem";
 
-	return (
-		<ul className="stat-list">
-			<li key={id} className="item">
-				<span className="label">{label}</span>
-				<span className="percentage">{percentage}</span>
-			</li>
-		</ul>
-	);
+export default function StatisticsList({ stats }) {
+	const statList = stats.map(item => {
+		const { id, label, percentage } = item;
+		return <StatisticsItem key={id} label={label} percentage={percentage} />;
+	});
+
+	return <ul className="stat-list">{statList}</ul>;
 }
