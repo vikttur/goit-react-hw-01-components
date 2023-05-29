@@ -1,5 +1,5 @@
 export default function FriendListItem(props) {
-	const { id, avatar, name, isOnline } = props;
+	const { avatar, name, isOnline } = props;
 
 	return (
 		<li className={isOnline ? "item" : ""}>
