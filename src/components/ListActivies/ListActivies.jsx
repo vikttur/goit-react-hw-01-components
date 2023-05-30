@@ -1,6 +1,6 @@
-export default function ProfileStatList(props) {
-	const { followers, views, likes } = props;
+import PropTypes from "prop-types";
 
+export default function ListActivies({ followers, views, likes }) {
 	return (
 		<ul className="stats">
 			<li>
@@ -18,3 +18,9 @@ export default function ProfileStatList(props) {
 		</ul>
 	);
 }
+
+ListActivies.propTypes = {
+	followers: PropTypes.number,
+	views: PropTypes.number,
+	likes: PropTypes.number,
+};

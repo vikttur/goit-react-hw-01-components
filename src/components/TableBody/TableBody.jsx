@@ -1,6 +1,6 @@
-export default function TableBody(row) {
-	const { type, amount, currency } = row;
+import PropTypes from "prop-types";
 
+export default function TableBody({ type, amount, currency }) {
 	return (
 		<tr>
 			<td>{type}</td>
@@ -9,3 +9,9 @@ export default function TableBody(row) {
 		</tr>
 	);
 }
+
+TableBody.propTypes = {
+	type: PropTypes.string.isRequired,
+	amount: PropTypes.string.isRequired,
+	currency: PropTypes.string.isRequired,
+};

@@ -1,8 +1,8 @@
+import PropTypes from "prop-types";
 import TableBody from "../TableBody/TableBody";
 
 export default function TransactionHistory({ items }) {
-	const tableItems = items.map(item => {
-		const { id, type, amount, currency } = item;
+	const tableItems = items.map(({ id, type, amount, currency }) => {
 		return <TableBody key={id} type={type} amount={amount} currency={currency} />;
 	});
 
@@ -20,3 +20,14 @@ export default function TransactionHistory({ items }) {
 		</table>
 	);
 }
+
+TransactionHistory.propTypes = {
+	friends: PropTypes.arrayOf(
+		PropTypes.exact({
+			id: PropTypes.string.isRequired,
+			type: PropTypes.string.isRequired,
+			amount: PropTypes.string.isRequired,
+			currency: PropTypes.string.isRequired,
+		}),
+	),
+};

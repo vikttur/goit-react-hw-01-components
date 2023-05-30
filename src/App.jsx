@@ -14,7 +14,7 @@ export default function App() {
 	return (
 		<>
 			<Profile username={username} tag={tag} location={location} avatar={avatar} stats={stats} />
-			<Statistics title={"Upload stats"} stats={data} />
+			<Statistics title="Upload stats" stats={data} />
 			<FriendList friends={friends} />
 			<TransactionHistory items={transactions} />
 		</>
