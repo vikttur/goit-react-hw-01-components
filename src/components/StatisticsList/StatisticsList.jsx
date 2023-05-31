@@ -3,8 +3,7 @@ import StatisticsItem from "../StatisticsItem/StatisticsItem";
 import css from "./StatisticsList.module.css";
 
 export default function StatisticsList({ stats }) {
-	const statList = stats.map(item => {
-		const { id, label, percentage } = item;
+	const statList = stats.map(({ id, label, percentage }) => {
 		return <StatisticsItem key={id} label={label} percentage={percentage} />;
 	});
 

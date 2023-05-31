@@ -7,6 +7,7 @@
 	padding: 8px 0;
 	background-color: var(--color-bgr-item);
 	border: var(--line-border);
+	border-radius: 8px;
 }
 
 .label {

@@ -54,6 +54,10 @@ thead {
 	text-transform: uppercase;
 }
 
+tr:nth-child(2n) {
+	background-color: var(--color-bgr-item);
+}
+
 td,
 th {
 	border: var(--line-border);
