@@ -1,0 +1,39 @@
+.description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 320px;
+	padding: 28px 0;
+
+	background-color: var(--color-card);
+	border: var(--line-border);
+	border-radius: 8px 8px 0 0;
+}
+
+.avatar {
+	height: 200px;
+	width: 200px;
+
+	background-color: var(--color-bgr-img);
+	border-radius: 50%;
+}
+
+.name {
+	padding-top: 28px;
+	padding-bottom: 8px;
+
+	font-size: 28px;
+	line-height: 1.13;
+	font-weight: bold;
+}
+
+.tag,
+.location {
+	padding: 6px;
+
+	font-size: 20px;
+	line-height: 1.17;
+	color: #212121;
+	opacity: 50%;
+}

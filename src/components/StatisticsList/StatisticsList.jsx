@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import StatisticsItem from "../StatisticsItem/StatisticsItem";
+import css from "./StatisticsList.module.css";
 
 export default function StatisticsList({ stats }) {
 	const statList = stats.map(item => {
@@ -7,7 +8,7 @@ export default function StatisticsList({ stats }) {
 		return <StatisticsItem key={id} label={label} percentage={percentage} />;
 	});
 
-	return <ul className="stat-list">{statList}</ul>;
+	return <ul className={css.statList}>{statList}</ul>;
 }
 
 StatisticsList.propTypes = {

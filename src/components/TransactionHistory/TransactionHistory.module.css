@@ -1,0 +1,15 @@
+.transactions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 20px;
+	background-color: var(--color-section);
+	border: var(--line-border);
+}
+
+.transactionHistory {
+	width: 520px;
+	background-color: var(--color-card);
+	border: var(--line-border);
+}

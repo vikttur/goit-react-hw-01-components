@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import Card from "../Card/Card";
 import ListActivies from "../ListActivies/ListActivies";
+import css from "./Profile.module.css";
 
 export default function Profile({ username, tag, location, avatar, stats }) {
 	const { followers, views, likes } = stats;
 
 	return (
-		<div className="profile">
+		<div className={css.profile}>
 			<Card username={username} tag={tag} location={location} avatar={avatar} />
 			<ListActivies followers={followers} views={views} likes={likes} />
 		</div>

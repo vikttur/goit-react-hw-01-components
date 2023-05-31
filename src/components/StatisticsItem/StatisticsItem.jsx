@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
+import css from "./StatisticsItem.module.css";
 
 export default function StatisticsItem(props) {
 	const { label, percentage } = props;
 
 	return (
-		<li className="item">
-			<span className="label">{label}</span>
-			<span className="percentage">{percentage}</span>
+		<li className={css.item}>
+			<span className={css.label}>{label}</span>
+			<span className={css.percentage}>{percentage}%</span>
 		</li>
 	);
 }

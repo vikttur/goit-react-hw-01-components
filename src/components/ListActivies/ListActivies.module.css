@@ -1,0 +1,34 @@
+.stats {
+	display: flex;
+	justify-content: center;
+
+	width: 320px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	width: 33.3333%;
+	padding: 12px 0;
+
+	background-color: var(--color-bgr-item);
+	border: var(--line-border);
+}
+
+.label {
+	padding: 6px;
+
+	font-size: 20px;
+	line-height: 1.15;
+	color: var(--color-text);
+	opacity: 50%;
+}
+
+.quantity {
+	font-size: 20px;
+	line-height: 1.13;
+	font-weight: bold;
+
+}
