@@ -21,7 +21,7 @@ export default function ListActivies({ followers, views, likes }) {
 }
 
 ListActivies.propTypes = {
-	followers: PropTypes.number,
-	views: PropTypes.number,
-	likes: PropTypes.number,
+	followers: PropTypes.number.isRequired,
+	views: PropTypes.number.isRequired,
+	likes: PropTypes.number.isRequired,
 };
