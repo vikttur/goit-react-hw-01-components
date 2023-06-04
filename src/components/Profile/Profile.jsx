@@ -5,12 +5,11 @@ import css from "./Profile.module.css";
 
 export default function Profile({ user }) {
 	const { username, tag, location, avatar, stats } = user;
-	const { followers, views, likes } = stats;
 
 	return (
 		<div className={css.profile}>
 			<Card username={username} tag={tag} location={location} avatar={avatar} />
-			<ListActivies followers={followers} views={views} likes={likes} />
+			<ListActivies stats={stats} />
 		</div>
 	);
 }
@@ -21,10 +20,6 @@ Profile.propTypes = {
 		tag: PropTypes.string.isRequired,
 		location: PropTypes.string.isRequired,
 		avatar: PropTypes.string.isRequired,
-		stats: PropTypes.exact({
-			followers: PropTypes.number.isRequired,
-			views: PropTypes.number.isRequired,
-			likes: PropTypes.number.isRequired,
-		}).isRequired,
+		stats: PropTypes.object.isRequired,
 	}).isRequired,
 };
